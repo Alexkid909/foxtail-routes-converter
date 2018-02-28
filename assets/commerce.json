@@ -1,0 +1,1082 @@
+{
+  "AddBasketProduct": {
+    "version": ["v1"],
+    "method": "PUT",
+    "parameters": {},
+    "sample": {
+      "200": "",
+      "500": ""
+    },
+    "headers": ["siteIdentifier"],
+    "path": {
+      "uri": "/commerce/baskets/{uuid:[a-z]+}/add",
+      "parameters": {
+        "uuid": {
+          "type": "string",
+          "description": ""
+        }
+      }
+    }
+  },
+  "BasketApplyDiscount": {
+    "version": ["v1"],
+    "method": "PUT",
+    "parameters": {},
+    "sample": {
+      "200": "",
+      "500": ""
+    },
+    "headers": ["siteIdentifier"],
+    "path": {
+      "uri": "/commerce/baskets/{uuid:[a-z]+}/discount/{discount:[a-z]+}",
+      "parameters": {
+        "uuid": {
+          "type": "string",
+          "description": ""
+        },
+        "discount": {
+          "type": "string",
+          "description": ""
+        }
+      }
+    }
+  },
+  "BasketUpdateDelivery": {
+    "version": ["v1"],
+    "method": "PUT",
+    "parameters": {},
+    "sample": {
+      "200": "",
+      "500": ""
+    },
+    "headers": ["siteIdentifier"],
+    "path": {
+      "uri": "/commerce/baskets/{uuid:[a-z]+}/shipping",
+      "parameters": {
+        "uuid": {
+          "type": "string",
+          "description": ""
+        }
+      }
+    }
+  },
+  "BasketUpdateRow": {
+    "version": ["v1"],
+    "method": "PUT",
+    "parameters": {},
+    "sample": {
+      "200": "",
+      "500": ""
+    },
+    "headers": ["siteIdentifier"],
+    "path": {
+      "uri": "/commerce/baskets/{uuid:[a-z]+}/{rowUuid:[a-z]+}/quantity/{quantity:[a-z]+}",
+      "parameters": {
+        "uuid": {
+          "type": "string",
+          "description": ""
+        },
+        "rowUuid": {
+          "type": "string",
+          "description": ""
+        },
+        "quantity": {
+          "type": "string",
+          "description": ""
+        }
+      }
+    }
+  },
+  "CategoryList": {
+    "version": ["v1"],
+    "method": "GET",
+    "parameters": {},
+    "sample": {
+      "200": "",
+      "500": ""
+    },
+    "queryStrings": {
+      "page": {
+        "type": "integer",
+        "description": "Pagination"
+      }
+    },
+    "headers": ["siteIdentifier"],
+    "path": {
+      "uri": "/commerce/categories"
+    }
+  },
+  "CreateBasket": {
+    "version": ["v1"],
+    "method": "POST",
+    "parameters": {},
+    "sample": {
+      "200": "",
+      "500": ""
+    },
+    "headers": ["siteIdentifier"],
+    "path": {
+      "uri": "/commerce/baskets"
+    }
+  },
+  "CreateCategory": {
+    "version": ["v1"],
+    "method": "POST",
+    "parameters": {},
+    "sample": {
+      "200": "",
+      "500": ""
+    },
+    "headers": ["siteIdentifier", "Authorization"],
+    "path": {
+      "uri": "/commerce/categories"
+    }
+  },
+  "CreateCourier": {
+    "version": ["v1"],
+    "method": "POST",
+    "parameters": {},
+    "sample": {
+      "200": "",
+      "500": ""
+    },
+    "headers": ["siteIdentifier", "Authorization"],
+    "path": {
+      "uri": "/commerce/shipping/couriers"
+    }
+  },
+  "CreateDiscount": {
+    "version": ["v1"],
+    "method": "POST",
+    "parameters": {},
+    "sample": {
+      "200": "",
+      "500": ""
+    },
+    "headers": ["siteIdentifier", "Authorization"],
+    "path": {
+      "uri": "/commerce/discounts"
+    }
+  },
+  "CreateOrder": {
+    "version": ["v1"],
+    "method": "POST",
+    "parameters": {},
+    "sample": {
+      "200": "",
+      "500": ""
+    },
+    "headers": ["siteIdentifier"],
+    "path": {
+      "uri": "/commerce/orders"
+    }
+  },
+  "CreateProcessTransaction": {
+    "version": ["v1"],
+    "method": "POST",
+    "parameters": {},
+    "sample": {
+      "200": "",
+      "500": ""
+    },
+    "headers": ["siteIdentifier"],
+    "path": {
+      "uri": "/commerce/transactions"
+    }
+  },
+  "CreateProduct": {
+    "version": ["v1"],
+    "method": "POST",
+    "parameters": {},
+    "sample": {
+      "200": "",
+      "500": ""
+    },
+    "headers": ["siteIdentifier", "Authorization"],
+    "path": {
+      "uri": "/commerce/products"
+    }
+  },
+  "CreateService": {
+    "version": ["v1"],
+    "method": "POST",
+    "parameters": {},
+    "sample": {
+      "200": "",
+      "500": ""
+    },
+    "headers": ["siteIdentifier", "Authorization"],
+    "path": {
+      "uri": "/commerce/shipping"
+    }
+  },
+  "DeleteBasketRow": {
+    "version": ["v1"],
+    "method": "DELETE",
+    "parameters": {},
+    "sample": {
+      "200": "",
+      "500": ""
+    },
+    "headers": ["siteIdentifier"],
+    "path": {
+      "uri": "/commerce/baskets/{uuid:[a-z]+}/{rowUuid:[a-z]+}",
+      "parameters": {
+        "uuid": {
+          "type": "string",
+          "description": ""
+        },
+        "rowUuid": {
+          "type": "string",
+          "description": ""
+        }
+      }
+    }
+  },
+  "DeleteCategory": {
+    "version": ["v1"],
+    "method": "DELETE",
+    "parameters": {},
+    "sample": {
+      "200": "",
+      "500": ""
+    },
+    "headers": ["siteIdentifier", "Authorization"],
+    "path": {
+      "uri": "/commerce/categories/{uuid:[a-z]+}",
+      "parameters": {
+        "uuid": {
+          "type": "string",
+          "description": ""
+        }
+      }
+    }
+  },
+  "DeleteCourier": {
+    "version": ["v1"],
+    "method": "DELETE",
+    "parameters": {},
+    "sample": {
+      "200": "",
+      "500": ""
+    },
+    "headers": ["siteIdentifier", "Authorization"],
+    "path": {
+      "uri": "/commerce/shipping/couriers/{uuid:[a-z]+}",
+      "parameters": {
+        "uuid": {
+          "type": "string",
+          "description": ""
+        }
+      }
+    }
+  },
+  "DeleteDiscount": {
+    "version": ["v1"],
+    "method": "DELETE",
+    "parameters": {},
+    "sample": {
+      "200": "",
+      "500": ""
+    },
+    "headers": ["siteIdentifier", "Authorization"],
+    "path": {
+      "uri": "/commerce/discounts/{uuid:[a-z]+}",
+      "parameters": {
+        "uuid": {
+          "type": "string",
+          "description": ""
+        }
+      }
+    }
+  },
+  "DeleteOrder": {
+    "version": ["v1"],
+    "method": "GET",
+    "parameters": {},
+    "sample": {
+      "200": "",
+      "500": ""
+    },
+    "queryStrings": {
+      "page": {
+        "type": "integer",
+        "description": "Pagination"
+      }
+    },
+    "headers": ["siteIdentifier", "Authorization"],
+    "path": {
+      "uri": "/commerce/orders/{uuid:[a-z]+}",
+      "parameters": {
+        "uuid": {
+          "type": "string",
+          "description": ""
+        }
+      }
+    }
+  },
+  "DeleteProduct": {
+    "version": ["v1"],
+    "method": "DELETE",
+    "parameters": {},
+    "sample": {
+      "200": "",
+      "500": ""
+    },
+    "headers": ["siteIdentifier", "Authorization"],
+    "path": {
+      "uri": "/commerce/products/{uuid:[a-z]+}",
+      "parameters": {
+        "uuid": {
+          "type": "string",
+          "description": ""
+        }
+      }
+    }
+  },
+  "DeleteService": {
+    "version": ["v1"],
+    "method": "DELETE",
+    "parameters": {},
+    "sample": {
+      "200": "",
+      "500": ""
+    },
+    "headers": ["siteIdentifier", "Authorization"],
+    "path": {
+      "uri": "/commerce/shipping/{uuid:[a-z]+}",
+      "parameters": {
+        "uuid": {
+          "type": "string",
+          "description": ""
+        }
+      }
+    }
+  },
+  "GetAllBaskets": {
+    "version": ["v1"],
+    "method": "GET",
+    "parameters": {},
+    "sample": {
+      "200": "",
+      "500": ""
+    },
+    "queryStrings": {
+      "page": {
+        "type": "integer",
+        "description": "Pagination"
+      }
+    },
+    "headers": ["siteIdentifier", "Authorization"],
+    "path": {
+      "uri": "/commerce/baskets"
+    }
+  },
+  "GetAllCouriers": {
+    "version": ["v1"],
+    "method": "GET",
+    "parameters": {},
+    "sample": {
+      "200": "",
+      "500": ""
+    },
+    "queryStrings": {
+      "page": {
+        "type": "integer",
+        "description": "Pagination"
+      }
+    },
+    "headers": ["siteIdentifier", "Authorization"],
+    "path": {
+      "uri": "/commerce/shipping/couriers"
+    }
+  },
+  "GetAllDiscounts": {
+    "version": ["v1"],
+    "method": "GET",
+    "parameters": {},
+    "sample": {
+      "200": "",
+      "500": ""
+    },
+    "queryStrings": {
+      "page": {
+        "type": "integer",
+        "description": "Pagination"
+      }
+    },
+    "headers": ["siteIdentifier", "Authorization"],
+    "path": {
+      "uri": "/commerce/discounts"
+    }
+  },
+  "GetAllOrders": {
+    "version": ["v1"],
+    "method": "GET",
+    "parameters": {},
+    "sample": {
+      "200": "",
+      "500": ""
+    },
+    "queryStrings": {
+      "page": {
+        "type": "integer",
+        "description": "Pagination"
+      }
+    },
+    "headers": ["siteIdentifier", "Authorization"],
+    "path": {
+      "uri": "/commerce/orders"
+    }
+  },
+  "GetAllShippingServices": {
+    "version": ["v1"],
+    "method": "GET",
+    "parameters": {},
+    "sample": {
+      "200": "",
+      "500": ""
+    },
+    "queryStrings": {
+      "page": {
+        "type": "integer",
+        "description": "Pagination"
+      }
+    },
+    "headers": ["siteIdentifier"],
+    "path": {
+      "uri": "/commerce/shipping"
+    }
+  },
+  "GetAllTransactions": {
+    "version": ["v1"],
+    "method": "GET",
+    "parameters": {},
+    "sample": {
+      "200": "",
+      "500": ""
+    },
+    "queryStrings": {
+      "page": {
+        "type": "integer",
+        "description": "Pagination"
+      }
+    },
+    "headers": ["siteIdentifier", "Authorization"],
+    "path": {
+      "uri": "/commerce/transactions"
+    }
+  },
+  "GetBasket": {
+    "version": ["v1"],
+    "method": "GET",
+    "parameters": {},
+    "sample": {
+      "200": "",
+      "500": ""
+    },
+    "queryStrings": {
+      "page": {
+        "type": "integer",
+        "description": "Pagination"
+      }
+    },
+    "headers": ["siteIdentifier"],
+    "path": {
+      "uri": "/commerce/baskets/{uuid:[a-z]+}",
+      "parameters": {
+        "uuid": {
+          "type": "string",
+          "description": ""
+        }
+      }
+    }
+  },
+  "GetCountries": {
+    "version": ["v1"],
+    "method": "GET",
+    "parameters": {},
+    "sample": {
+      "200": "",
+      "500": ""
+    },
+    "queryStrings": {
+      "page": {
+        "type": "integer",
+        "description": "Pagination"
+      }
+    },
+    "headers": ["siteIdentifier"],
+    "path": {
+      "uri": "/commerce/baskets/countries"
+    }
+  },
+  "GetCountry": {
+    "version": ["v1"],
+    "method": "GET",
+    "parameters": {},
+    "sample": {
+      "200": "",
+      "500": ""
+    },
+    "queryStrings": {
+      "page": {
+        "type": "integer",
+        "description": "Pagination"
+      }
+    },
+    "headers": ["siteIdentifier"],
+    "path": {
+      "uri": "/commerce/baskets/countries/{countryCode:[a-z]+}",
+      "parameters": {
+        "countryCode": {
+          "type": "string",
+          "description": ""
+        }
+      }
+    }
+  },
+  "GetCourierShippingServices": {
+    "version": ["v1"],
+    "method": "GET",
+    "parameters": {},
+    "sample": {
+      "200": "",
+      "500": ""
+    },
+    "queryStrings": {
+      "page": {
+        "type": "integer",
+        "description": "Pagination"
+      }
+    },
+    "headers": ["siteIdentifier"],
+    "path": {
+      "uri": "/commerce/shipping/filter/courier/{courierUuid:[a-z]+}",
+      "parameters": {
+        "courierUuid": {
+          "type": "string",
+          "description": ""
+        }
+      }
+    }
+  },
+  "GetOrder": {
+    "version": ["v1"],
+    "method": "GET",
+    "parameters": {},
+    "sample": {
+      "200": "",
+      "500": ""
+    },
+    "queryStrings": {
+      "page": {
+        "type": "integer",
+        "description": "Pagination"
+      }
+    },
+    "headers": ["siteIdentifier", "Authorization"],
+    "path": {
+      "uri": "/commerce/orders/{uuid:[a-z]+}",
+      "parameters": {
+        "uuid": {
+          "type": "string",
+          "description": ""
+        }
+      }
+    }
+  },
+  "GetOrderTransactions": {
+    "version": ["v1"],
+    "method": "GET",
+    "parameters": {},
+    "sample": {
+      "200": "",
+      "500": ""
+    },
+    "queryStrings": {
+      "page": {
+        "type": "integer",
+        "description": "Pagination"
+      }
+    },
+    "headers": ["siteIdentifier", "Authorization"],
+    "path": {
+      "uri": "/commerce/orders/{uuid:[a-z]+}/transactions",
+      "parameters": {
+        "uuid": {
+          "type": "string",
+          "description": ""
+        }
+      }
+    }
+  },
+  "GetPermalinkProductLookup": {
+    "version": ["v1"],
+    "method": "GET",
+    "parameters": {},
+    "sample": {
+      "200": "",
+      "500": ""
+    },
+    "queryStrings": {
+      "page": {
+        "type": "integer",
+        "description": "Pagination"
+      }
+    },
+    "headers": [],
+    "path": {
+      "uri": "/commerce/products/permalink/{permalink:[a-z]+}",
+      "parameters": {
+        "permalink": {
+          "type": "string",
+          "description": ""
+        }
+      }
+    }
+  },
+  "GetProduct": {
+    "version": ["v1"],
+    "method": "GET",
+    "parameters": {},
+    "sample": {
+      "200": "",
+      "500": ""
+    },
+    "queryStrings": {
+      "page": {
+        "type": "integer",
+        "description": "Pagination"
+      }
+    },
+    "headers": [],
+    "path": {
+      "uri": "/commerce/products/{uuid:[a-z]+}",
+      "parameters": {
+        "uuid": {
+          "type": "string",
+          "description": ""
+        }
+      }
+    }
+  },
+  "GetProductCategories": {
+    "version": ["v1"],
+    "method": "GET",
+    "parameters": {},
+    "sample": {
+      "200": "",
+      "500": ""
+    },
+    "headers": ["siteIdentifier"],
+    "path": {
+      "uri": "/commerce/products/{uuid:[a-z]+}/categories",
+      "parameters": {
+        "uuid": {
+          "type": "string",
+          "description": ""
+        }
+      }
+    }
+  },
+  "GetSpecificCourier": {
+    "version": ["v1"],
+    "method": "GET",
+    "parameters": {},
+    "sample": {
+      "200": "",
+      "500": ""
+    },
+    "queryStrings": {
+      "page": {
+        "type": "integer",
+        "description": "Pagination"
+      }
+    },
+    "headers": ["siteIdentifier", "Authorization"],
+    "path": {
+      "uri": "/commerce/shipping/couriers/{uuid:[a-z]+}",
+      "parameters": {
+        "uuid": {
+          "type": "string",
+          "description": ""
+        }
+      }
+    }
+  },
+  "GetSpecificService": {
+    "version": ["v1"],
+    "method": "GET",
+    "parameters": {},
+    "sample": {
+      "200": "",
+      "500": ""
+    },
+    "queryStrings": {
+      "page": {
+        "type": "integer",
+        "description": "Pagination"
+      }
+    },
+    "headers": ["siteIdentifier", "Authorization"],
+    "path": {
+      "uri": "/commerce/shipping/{uuid:[a-z]+}",
+      "parameters": {
+        "uuid": {
+          "type": "string",
+          "description": ""
+        }
+      }
+    }
+  },
+  "GetTransaction": {
+    "version": ["v1"],
+    "method": "GET",
+    "parameters": {},
+    "sample": {
+      "200": "",
+      "500": ""
+    },
+    "queryStrings": {
+      "page": {
+        "type": "integer",
+        "description": "Pagination"
+      }
+    },
+    "headers": ["siteIdentifier", "Authorization"],
+    "path": {
+      "uri": "/commerce/transactions/{uuid:[a-z]+}",
+      "parameters": {
+        "uuid": {
+          "type": "string",
+          "description": ""
+        }
+      }
+    }
+  },
+  "LinkCategoryToProduct": {
+    "version": ["v1"],
+    "method": "POST",
+    "parameters": {},
+    "sample": {
+      "200": "",
+      "500": ""
+    },
+    "headers": ["siteIdentifier", "Authorization"],
+    "path": {
+      "uri": "/commerce/categories/{categoryUuid:[a-z]+}/product/{productUuid:[a-z]+}",
+      "parameters": {
+        "categoryUuid": {
+          "type": "string",
+          "description": ""
+        },
+        "productUuid": {
+          "type": "string",
+          "description": ""
+        }
+      }
+    }
+  },
+  "ListAllCategoryProducts": {
+    "version": ["v1"],
+    "method": "GET",
+    "parameters": {},
+    "sample": {
+      "200": "",
+      "500": ""
+    },
+    "queryStrings": {
+      "page": {
+        "type": "integer",
+        "description": "Pagination"
+      }
+    },
+    "headers": [],
+    "path": {
+      "uri": "/commerce/products/category/{categoryUuid:[a-z]+}",
+      "parameters": {
+        "categoryUuid": {
+          "type": "string",
+          "description": ""
+        }
+      }
+    }
+  },
+  "ListAllProducts": {
+    "version": ["v1"],
+    "method": "GET",
+    "parameters": {},
+    "sample": {
+      "200": "",
+      "500": ""
+    },
+    "queryStrings": {
+      "page": {
+        "type": "integer",
+        "description": "Pagination"
+      }
+    },
+    "headers": [],
+    "path": {
+      "uri": "/commerce/products"
+    }
+  },
+  "PTCreateTag": {
+    "version": ["v1"],
+    "method": "POST",
+    "parameters": {},
+    "sample": {
+      "200": "",
+      "500": ""
+    },
+    "headers": ["siteIdentifier"],
+    "path": {
+      "uri": "/commerce/tags"
+    }
+  },
+  "PTDeleteTag": {
+    "version": ["v1"],
+    "method": "DELETE",
+    "parameters": {},
+    "sample": {
+      "200": "",
+      "500": ""
+    },
+    "headers": ["siteIdentifier"],
+    "path": {
+      "uri": "/commerce/tags/{uuid:[a-z]+}",
+      "parameters": {
+        "uuid": {
+          "type": "string",
+          "description": ""
+        }
+      }
+    }
+  },
+  "PTGetTag": {
+    "version": ["v1"],
+    "method": "GET",
+    "parameters": {},
+    "sample": {
+      "200": "",
+      "500": ""
+    },
+    "queryStrings": {
+      "page": {
+        "type": "integer",
+        "description": "Pagination"
+      }
+    },
+    "headers": ["siteIdentifier"],
+    "path": {
+      "uri": "/commerce/tags/{uuid:[a-z]+}",
+      "parameters": {
+        "uuid": {
+          "type": "string",
+          "description": ""
+        }
+      }
+    }
+  },
+  "UnlinkCategoryToProduct": {
+    "version": ["v1"],
+    "method": "DELETE",
+    "parameters": {},
+    "sample": {
+      "200": "",
+      "500": ""
+    },
+    "headers": ["siteIdentifier", "Authorization"],
+    "path": {
+      "uri": "/commerce/categories/{categoryUuid:[a-z]+}/product/{productUuid:[a-z]+}",
+      "parameters": {
+        "categoryUuid": {
+          "type": "string",
+          "description": ""
+        },
+        "productUuid": {
+          "type": "string",
+          "description": ""
+        }
+      }
+    }
+  },
+  "UpdateBasket": {
+    "version": ["v1"],
+    "method": "PUT",
+    "parameters": {},
+    "sample": {
+      "200": "",
+      "500": ""
+    },
+    "headers": ["siteIdentifier"],
+    "path": {
+      "uri": "/commerce/baskets/{uuid:[a-z]+}",
+      "parameters": {
+        "uuid": {
+          "type": "string",
+          "description": ""
+        }
+      }
+    }
+  },
+  "UpdateCategory": {
+    "version": ["v1"],
+    "method": "PUT",
+    "parameters": {},
+    "sample": {
+      "200": "",
+      "500": ""
+    },
+    "headers": ["siteIdentifier", "Authorization"],
+    "path": {
+      "uri": "/commerce/categories/{uuid:[a-z]+}",
+      "parameters": {
+        "uuid": {
+          "type": "string",
+          "description": ""
+        }
+      }
+    }
+  },
+  "UpdateCourier": {
+    "version": ["v1"],
+    "method": "PUT",
+    "parameters": {},
+    "sample": {
+      "200": "",
+      "500": ""
+    },
+    "headers": ["siteIdentifier", "Authorization"],
+    "path": {
+      "uri": "/commerce/shipping/couriers/{uuid:[a-z]+}",
+      "parameters": {
+        "uuid": {
+          "type": "string",
+          "description": ""
+        }
+      }
+    }
+  },
+  "UpdateDiscount": {
+    "version": ["v1"],
+    "method": "PUT",
+    "parameters": {},
+    "sample": {
+      "200": "",
+      "500": ""
+    },
+    "headers": ["siteIdentifier", "Authorization"],
+    "path": {
+      "uri": "/commerce/discounts/{uuid:[a-z]+}",
+      "parameters": {
+        "uuid": {
+          "type": "string",
+          "description": ""
+        }
+      }
+    }
+  },
+  "UpdateOrder": {
+    "version": ["v1"],
+    "method": "PUT",
+    "parameters": {},
+    "sample": {
+      "200": "",
+      "500": ""
+    },
+    "headers": ["siteIdentifier", "Authorization"],
+    "path": {
+      "uri": "/commerce/orders/{uuid:[a-z]+}",
+      "parameters": {
+        "uuid": {
+          "type": "string",
+          "description": ""
+        }
+      }
+    }
+  },
+  "UpdateProduct": {
+    "version": ["v1"],
+    "method": "PUT",
+    "parameters": {},
+    "sample": {
+      "200": "",
+      "500": ""
+    },
+    "headers": ["siteIdentifier", "Authorization"],
+    "path": {
+      "uri": "/commerce/products/{uuid:[a-z]+}",
+      "parameters": {
+        "uuid": {
+          "type": "string",
+          "description": ""
+        }
+      }
+    }
+  },
+  "UpdateService": {
+    "version": ["v1"],
+    "method": "PUT",
+    "parameters": {},
+    "sample": {
+      "200": "",
+      "500": ""
+    },
+    "headers": ["siteIdentifier", "Authorization"],
+    "path": {
+      "uri": "/commerce/shipping/{uuid:[a-z]+}",
+      "parameters": {
+        "uuid": {
+          "type": "string",
+          "description": ""
+        }
+      }
+    }
+  },
+  "UpdateTransaction": {
+    "version": ["v1"],
+    "method": "PUT",
+    "parameters": {},
+    "sample": {
+      "200": "",
+      "500": ""
+    },
+    "headers": ["siteIdentifier", "Authorization"],
+    "path": {
+      "uri": "/commerce/transactions/{uuid:[a-z]+}",
+      "parameters": {
+        "uuid": {
+          "type": "string",
+          "description": ""
+        }
+      }
+    }
+  },
+  "getDiscount": {
+    "version": ["v1"],
+    "method": "GET",
+    "parameters": {},
+    "sample": {
+      "200": "",
+      "500": ""
+    },
+    "queryStrings": {
+      "page": {
+        "type": "integer",
+        "description": "Pagination"
+      }
+    },
+    "headers": ["siteIdentifier", "Authorization"],
+    "path": {
+      "uri": "/commerce/discounts/{uuid:[a-z]+}",
+      "parameters": {
+        "uuid": {
+          "type": "string",
+          "description": ""
+        }
+      }
+    }
+  }
+}

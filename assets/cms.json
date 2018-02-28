@@ -1,0 +1,255 @@
+{
+  "CreateBlockPageAssociation": {
+    "version": ["v1"],
+    "method": "POST",
+    "parameters": {},
+    "sample": {
+      "200": "",
+      "500": ""
+    },
+    "headers": ["siteIdentifier", "Authorization"],
+    "path": {
+      "uri": "/cms/blocks"
+    }
+  },
+  "CreatePage": {
+    "version": ["v1"],
+    "method": "POST",
+    "parameters": {},
+    "sample": {
+      "200": "",
+      "500": ""
+    },
+    "headers": ["siteIdentifier", "Authorization"],
+    "path": {
+      "uri": "/cms"
+    }
+  },
+  "DeletePage": {
+    "version": ["v1"],
+    "method": "DELETE",
+    "parameters": {},
+    "sample": {
+      "200": "",
+      "500": ""
+    },
+    "headers": ["Authorization", "siteIdentifier"],
+    "path": {
+      "uri": "/cms/{uuid:[a-z]+}",
+      "parameters": {
+        "uuid": {
+          "type": "string",
+          "description": ""
+        }
+      }
+    }
+  },
+  "DeletePageBlock": {
+    "version": ["v1"],
+    "method": "DELETE",
+    "parameters": {},
+    "sample": {
+      "200": "",
+      "500": ""
+    },
+    "headers": ["siteIdentifier", "Authorization"],
+    "path": {
+      "uri": "/cms/blocks/{uuid:[a-z]+}",
+      "parameters": {
+        "uuid": {
+          "type": "string",
+          "description": ""
+        }
+      }
+    }
+  },
+  "GetAllBlocks": {
+    "version": ["v1"],
+    "method": "GET",
+    "parameters": {},
+    "sample": {
+      "200": "",
+      "500": ""
+    },
+    "queryStrings": {
+      "page": {
+        "type": "integer",
+        "description": "Pagination"
+      }
+    },
+    "headers": ["siteIdentifier", "Authorization"],
+    "path": {
+      "uri": "/cms/blocks"
+    }
+  },
+  "GetAllPages": {
+    "version": ["v1"],
+    "method": "GET",
+    "parameters": {},
+    "sample": {
+      "200": "",
+      "500": ""
+    },
+    "queryStrings": {
+      "page": {
+        "type": "integer",
+        "description": "Pagination"
+      }
+    },
+    "headers": ["siteIdentifier"],
+    "path": {
+      "uri": "/cms"
+    }
+  },
+  "GetAllPagesWithChildren": {
+    "version": ["v1"],
+    "method": "GET",
+    "parameters": {},
+    "sample": {
+      "200": "",
+      "500": ""
+    },
+    "queryStrings": {
+      "page": {
+        "type": "integer",
+        "description": "Pagination"
+      }
+    },
+    "headers": ["siteIdentifier"],
+    "path": {
+      "uri": "/cms"
+    }
+  },
+  "GetNavigation": {
+    "version": ["v1"],
+    "method": "GET",
+    "parameters": {},
+    "sample": {
+      "200": "",
+      "500": ""
+    },
+    "queryStrings": {
+      "page": {
+        "type": "integer",
+        "description": "Pagination"
+      }
+    },
+    "headers": ["siteIdentifier"],
+    "path": {
+      "uri": "/cms/navigation"
+    }
+  },
+  "GetPage": {
+    "version": ["v1"],
+    "method": "GET",
+    "parameters": {},
+    "sample": {
+      "200": "",
+      "500": ""
+    },
+    "queryStrings": {
+      "page": {
+        "type": "integer",
+        "description": "Pagination"
+      }
+    },
+    "headers": ["siteIdentifier"],
+    "path": {
+      "uri": "/cms/{uuid:[a-z]+}",
+      "parameters": {
+        "uuid": {
+          "type": "string",
+          "description": ""
+        }
+      }
+    }
+  },
+  "GetPageByPermalink": {
+    "version": ["v1"],
+    "method": "GET",
+    "parameters": {},
+    "sample": {
+      "200": "",
+      "500": ""
+    },
+    "queryStrings": {
+      "page": {
+        "type": "integer",
+        "description": "Pagination"
+      }
+    },
+    "headers": ["siteIdentifier"],
+    "path": {
+      "uri": "/cms/permalink/{permalink:[a-z]+}",
+      "parameters": {
+        "permalink": {
+          "type": "string",
+          "description": ""
+        }
+      }
+    }
+  },
+  "PageChildren": {
+    "version": ["v1"],
+    "method": "GET",
+    "parameters": {},
+    "sample": {
+      "200": "",
+      "500": ""
+    },
+    "queryStrings": {
+      "page": {
+        "type": "integer",
+        "description": "Pagination"
+      }
+    },
+    "headers": ["siteIdentifier"],
+    "path": {
+      "uri": "/cms/{uuid:[a-z]+}/children",
+      "parameters": {
+        "uuid": {
+          "type": "string",
+          "description": ""
+        }
+      }
+    }
+  },
+  "UpdatePage": {
+    "version": ["v1"],
+    "method": "PUT",
+    "parameters": {},
+    "sample": {
+      "200": "",
+      "500": ""
+    },
+    "headers": ["Authorization", "siteIdentifier"],
+    "path": {
+      "uri": "/cms/{uuid:[a-z]+}",
+      "parameters": {
+        "uuid": {
+          "type": "string",
+          "description": ""
+        }
+      }
+    }
+  },
+  "UpdatePageBlock": {
+    "version": ["v1"],
+    "method": "PUT",
+    "parameters": {},
+    "sample": {
+      "200": "",
+      "500": ""
+    },
+    "headers": ["siteIdentifier", "Authorization"],
+    "path": {
+      "uri": "/cms/blocks/{uuid:[a-z]+}",
+      "parameters": {
+        "uuid": {
+          "type": "string",
+          "description": ""
+        }
+      }
+    }
+  }
+}

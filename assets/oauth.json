@@ -1,0 +1,193 @@
+{
+  "DeleteAccessToken": {
+    "version": ["v1"],
+    "method": "DELETE",
+    "parameters": {},
+    "sample": {
+      "200": "",
+      "500": ""
+    },
+    "headers": [],
+    "path": {
+      "uri": "/oauth/tokens/{token_id:[a-z]+}",
+      "parameters": {
+        "token_id": {
+          "type": "string",
+          "description": ""
+        }
+      }
+    }
+  },
+  "DeleteOauthClients": {
+    "version": ["v1"],
+    "method": "DELETE",
+    "parameters": {},
+    "sample": {
+      "200": "",
+      "500": ""
+    },
+    "headers": [],
+    "path": {
+      "uri": "/oauth/clients/{client_id:[a-z]+}",
+      "parameters": {
+        "client_id": {
+          "type": "string",
+          "description": ""
+        }
+      }
+    }
+  },
+  "DeletePersonalAccessTokens": {
+    "version": ["v1"],
+    "method": "DELETE",
+    "parameters": {},
+    "sample": {
+      "200": "",
+      "500": ""
+    },
+    "headers": [],
+    "path": {
+      "uri": "/oauth/personal/{token_id:[a-z]+}",
+      "parameters": {
+        "token_id": {
+          "type": "string",
+          "description": ""
+        }
+      }
+    }
+  },
+  "GetAccessTokens": {
+    "version": ["v1"],
+    "method": "GET",
+    "parameters": {},
+    "sample": {
+      "200": "",
+      "500": ""
+    },
+    "queryStrings": {
+      "page": {
+        "type": "integer",
+        "description": "Pagination"
+      }
+    },
+    "headers": [],
+    "path": {
+      "uri": "/oauth/tokens"
+    }
+  },
+  "GetOauthClients": {
+    "version": ["v1"],
+    "method": "GET",
+    "parameters": {},
+    "sample": {
+      "200": "",
+      "500": ""
+    },
+    "queryStrings": {
+      "page": {
+        "type": "integer",
+        "description": "Pagination"
+      }
+    },
+    "headers": [],
+    "path": {
+      "uri": "/oauth/clients"
+    }
+  },
+  "GetOauthScopes": {
+    "version": ["v1"],
+    "method": "GET",
+    "parameters": {},
+    "sample": {
+      "200": "",
+      "500": ""
+    },
+    "queryStrings": {
+      "page": {
+        "type": "integer",
+        "description": "Pagination"
+      }
+    },
+    "headers": [],
+    "path": {
+      "uri": "/oauth/scopes"
+    }
+  },
+  "GetPersonalAccessTokens": {
+    "version": ["v1"],
+    "method": "GET",
+    "parameters": {},
+    "sample": {
+      "200": "",
+      "500": ""
+    },
+    "queryStrings": {
+      "page": {
+        "type": "integer",
+        "description": "Pagination"
+      }
+    },
+    "headers": [],
+    "path": {
+      "uri": "/oauth/personal"
+    }
+  },
+  "PostOauthClients": {
+    "version": ["v1"],
+    "method": "POST",
+    "parameters": {},
+    "sample": {
+      "200": "",
+      "500": ""
+    },
+    "headers": [],
+    "path": {
+      "uri": "/oauth/clients"
+    }
+  },
+  "PostPersonalAccessTokens": {
+    "version": ["v1"],
+    "method": "POST",
+    "parameters": {},
+    "sample": {
+      "200": "",
+      "500": ""
+    },
+    "headers": [],
+    "path": {
+      "uri": "/oauth/personal"
+    }
+  },
+  "PostRefreshAccessToken": {
+    "version": ["v1"],
+    "method": "POST",
+    "parameters": {},
+    "sample": {
+      "200": "",
+      "500": ""
+    },
+    "headers": [],
+    "path": {
+      "uri": "/oauth/token/refresh"
+    }
+  },
+  "PutOauthClients": {
+    "version": ["v1"],
+    "method": "PUT",
+    "parameters": {},
+    "sample": {
+      "200": "",
+      "500": ""
+    },
+    "headers": [],
+    "path": {
+      "uri": "/oauth/clients/{client_id:[a-z]+}",
+      "parameters": {
+        "client_id": {
+          "type": "string",
+          "description": ""
+        }
+      }
+    }
+  }
+}

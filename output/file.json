@@ -1,0 +1,146 @@
+
+FORMAT: 1A
+
+#Chemistry CMS API
+
+# Group assetmanager
+                
+## AM Files [/assetmanager/{uuid:[a-z]+}/files]
+
+### createamfiles [POST]
+
++ Response 200 
+
++ Response 500 
+
++ Parameters
+        + uuid (string)- 
+## AM Group [/assetmanager/groups]
+
+### createamgroup [POST]
+
++ Response 200 
+
++ Response 500 
+
+
+## AM Assets [/assetmanager]
+
+### createasset [POST]
+
++ Response 200 
+
++ Response 500 
+
+
+## AM Files [/assetmanager/{assetUuid:[a-z]+}/files/{uuid:[a-z]+}]
+
+### deleteamfile [DELETE]
+
++ Response 200 
+
++ Response 500 
+
++ Parameters
+        + assetUuid (string)- 
+        + uuid (string)- 
+## AM Group [/assetmanager/groups/{uuid:[a-z]+}]
+
+### deleteamgroup [DELETE]
+
++ Response 200 
+
++ Response 500 
+
++ Parameters
+        + uuid (string)- 
+## AM Assets [/assetmanager/{uuid:[a-z]+}]
+
+### deleteasset [DELETE]
+
++ Response 200 
+
++ Response 500 
+
++ Parameters
+        + uuid (string)- 
+## AM Group [/assetmanager/groups/{uuid:[a-z]+}]
+
+### getamgroups [GET]
+
++ Response 200 
+
++ Response 500 
+
++ Parameters
+        + uuid (string)- 
+## AM Assets [/assetmanager/{uuid:[a-z]+}]
+
+### getasset [GET]
+
++ Response 200 
+
++ Response 500 
+
++ Parameters
+        + uuid (string)- 
+## AM Files [/assetmanager/{uuid:[a-z]+}/files]
+
+### listamfiles [GET]
+
++ Response 200 
+
++ Response 500 
+
++ Parameters
+        + uuid (string)- 
+## AM Group [/assetmanager/groups]
+
+### listamgroups [GET]
+
++ Response 200 
+
++ Response 500 
+
+
+## AM Assets [/assetmanager]
+
+### listassets [GET]
+
++ Response 200 
+
++ Response 500 
+
+
+## AM Files [/assetmanager/{assetUuid:[a-z]+}/files/{fileUuid:[a-z]+}/primary]
+
+### primaryamfile [PUT]
+
++ Response 200 
+
++ Response 500 
+
++ Parameters
+        + assetUuid (string)- 
+        + fileUuid (string)- 
+## AM Group [/assetmanager/groups/{uuid:[a-z]+}]
+
+### updateamgroup [PUT]
+
++ Response 200 
+
++ Response 500 
+
++ Parameters
+        + uuid (string)- 
+## AM Assets [/assetmanager/{uuid:[a-z]+}]
+
+### updateasset [PUT]
+
++ Response 200 
+
++ Response 500 
+
++ Parameters
+        + uuid (string)- 
+

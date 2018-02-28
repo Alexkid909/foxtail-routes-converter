@@ -1,0 +1,78 @@
+{
+  "getRoutes": {
+    "version": ["v2"],
+    "resources": {
+      "namespace": "app\\http\\controllers\\base",
+      "controller": "Routes",
+      "action": "getRoutes",
+      "middleware": {}
+    },
+    "path": {
+      "root": true,
+      "uri": "routes/",
+      "parameters": {}
+    },
+    "method": "GET",
+    "headers": [],
+    "parameters": {},
+    "queryStrings": {},
+    "sample": {
+      "200": "",
+      "500": ""
+    }
+  },
+  "getRoute": {
+    "version": ["v2"],
+    "resources": {
+      "namespace": "app\\http\\controllers\\base",
+      "controller": "Routes",
+      "action": "getRoute",
+      "middleware": {}
+    },
+    "path": {
+      "root": true,
+      "uri": "routes/{route:[a-z]+}/",
+      "parameters": {
+        "route": {
+          "type": "string",
+          "description": "Route file to obtain; orders"
+        }
+      }
+    },
+    "method": "GET",
+    "headers": [],
+    "parameters": {},
+    "queryStrings": {},
+    "sample": {
+      "200": "",
+      "500": ""
+    }
+  },
+  "preflight": {
+    "version": ["v2"],
+    "resources": {
+      "namespace": "app\\http\\controllers\\base",
+      "controller": "Routes",
+      "action": "preflight",
+      "middleware": {}
+    },
+    "path": {
+      "root": true,
+      "uri": "{catch:(.*)}",
+      "parameters": {
+        "catch": {
+          "type": "string",
+          "description": "Catch all"
+        }
+      }
+    },
+    "method": "OPTIONS",
+    "headers": [],
+    "parameters": {},
+    "queryString": {},
+    "sample": {
+      "200": "",
+      "500": ""
+    }
+  }
+}

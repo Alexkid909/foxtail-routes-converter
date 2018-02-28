@@ -1,0 +1,546 @@
+{
+  "createform": {
+    "version": ["v1"],
+    "method": "POST",
+    "parameters": {},
+    "sample": {
+      "200": "",
+      "500": ""
+    },
+    "headers": ["siteIdentifier", "Authorization"],
+    "path": {
+      "uri": "/forms"
+    }
+  },
+  "createformdata": {
+    "version": ["v1"],
+    "method": "POST",
+    "parameters": {},
+    "sample": {
+      "200": "",
+      "500": ""
+    },
+    "headers": ["siteIdentifier"],
+    "path": {
+      "uri": "/forms/{uuid:[a-z]+}/data",
+      "parameters": {
+        "uuid": {
+          "type": "string",
+          "description": ""
+        }
+      }
+    }
+  },
+  "createformfield": {
+    "version": ["v1"],
+    "method": "POST",
+    "parameters": {},
+    "sample": {
+      "200": "",
+      "500": ""
+    },
+    "headers": ["siteIdentifier", "Authorization"],
+    "path": {
+      "uri": "/forms/{uuid:[a-z]+}/fields",
+      "parameters": {
+        "uuid": {
+          "type": "string",
+          "description": ""
+        }
+      }
+    }
+  },
+  "createformgroups": {
+    "version": ["v1"],
+    "method": "POST",
+    "parameters": {},
+    "sample": {
+      "200": "",
+      "500": ""
+    },
+    "headers": ["siteIdentifier", "Authorization"],
+    "path": {
+      "uri": "/forms/{uuid:[a-z]+}/groups",
+      "parameters": {
+        "uuid": {
+          "type": "string",
+          "description": ""
+        }
+      }
+    }
+  },
+  "createformresult": {
+    "version": ["v1"],
+    "method": "CREATE",
+    "parameters": {},
+    "sample": {
+      "200": "",
+      "500": ""
+    },
+    "headers": ["siteIdentifier", "Authorization"],
+    "path": {
+      "uri": "/forms/{uuid:[a-z]+}/results",
+      "parameters": {
+        "uuid": {
+          "type": "string",
+          "description": ""
+        }
+      }
+    }
+  },
+  "deleteform": {
+    "version": ["v1"],
+    "method": "DELETE",
+    "parameters": {},
+    "sample": {
+      "200": "",
+      "500": ""
+    },
+    "headers": ["siteIdentifier", "Authorization"],
+    "path": {
+      "uri": "/forms/{uuid:[a-z]+}",
+      "parameters": {
+        "uuid": {
+          "type": "string",
+          "description": ""
+        }
+      }
+    }
+  },
+  "deleteformdata": {
+    "version": ["v1"],
+    "method": "DELETE",
+    "parameters": {},
+    "sample": {
+      "200": "",
+      "500": ""
+    },
+    "headers": ["siteIdentifier", "Authorization"],
+    "path": {
+      "uri": "/forms/{uuid:[a-z]+}/data/{dataUuid:[a-z]+}",
+      "parameters": {
+        "uuid": {
+          "type": "string",
+          "description": ""
+        },
+        "dataUuid": {
+          "type": "string",
+          "description": ""
+        }
+      }
+    }
+  },
+  "deleteformfield": {
+    "version": ["v1"],
+    "method": "DELETE",
+    "parameters": {},
+    "sample": {
+      "200": "",
+      "500": ""
+    },
+    "headers": ["siteIdentifier", "Authorization"],
+    "path": {
+      "uri": "/forms/{uuid:[a-z]+}/fields/{fieldUuid:[a-z]+}",
+      "parameters": {
+        "uuid": {
+          "type": "string",
+          "description": ""
+        },
+        "fieldUuid": {
+          "type": "string",
+          "description": ""
+        }
+      }
+    }
+  },
+  "deleteformgroup": {
+    "version": ["v1"],
+    "method": "DELETE",
+    "parameters": {},
+    "sample": {
+      "200": "",
+      "500": ""
+    },
+    "headers": ["siteIdentifier", "Authorization"],
+    "path": {
+      "uri": "/forms/{uuid:[a-z]+}/groups/{groupUuid:[a-z]+}",
+      "parameters": {
+        "uuid": {
+          "type": "string",
+          "description": ""
+        },
+        "groupUuid": {
+          "type": "string",
+          "description": ""
+        }
+      }
+    }
+  },
+  "deleteformresult": {
+    "version": ["v1"],
+    "method": "DELETE",
+    "parameters": {},
+    "sample": {
+      "200": "",
+      "500": ""
+    },
+    "headers": ["siteIdentifier", "Authorization"],
+    "path": {
+      "uri": "/forms/{uuid:[a-z]+}/results/{resultUuid:[a-z]+}",
+      "parameters": {
+        "uuid": {
+          "type": "string",
+          "description": ""
+        },
+        "resultUuid": {
+          "type": "string",
+          "description": ""
+        }
+      }
+    }
+  },
+  "getform": {
+    "version": ["v1"],
+    "method": "GET",
+    "parameters": {},
+    "sample": {
+      "200": "",
+      "500": ""
+    },
+    "queryStrings": {
+      "page": {
+        "type": "integer",
+        "description": "Pagination"
+      }
+    },
+    "headers": ["siteIdentifier", "Authorization"],
+    "path": {
+      "uri": "/forms/{uuid:[a-z]+}",
+      "parameters": {
+        "uuid": {
+          "type": "string",
+          "description": ""
+        }
+      }
+    }
+  },
+  "getformdata": {
+    "version": ["v1"],
+    "method": "GET",
+    "parameters": {},
+    "sample": {
+      "200": "",
+      "500": ""
+    },
+    "queryStrings": {
+      "page": {
+        "type": "integer",
+        "description": "Pagination"
+      }
+    },
+    "headers": ["siteIdentifier", "Authorization"],
+    "path": {
+      "uri": "/forms/{uuid:[a-z]+}/data/{dataUuid:[a-z]+}",
+      "parameters": {
+        "uuid": {
+          "type": "string",
+          "description": ""
+        },
+        "dataUuid": {
+          "type": "string",
+          "description": ""
+        }
+      }
+    }
+  },
+  "getformfield": {
+    "version": ["v1"],
+    "method": "GET",
+    "parameters": {},
+    "sample": {
+      "200": "",
+      "500": ""
+    },
+    "queryStrings": {
+      "page": {
+        "type": "integer",
+        "description": "Pagination"
+      }
+    },
+    "headers": ["siteIdentifier", "Authorization"],
+    "path": {
+      "uri": "/forms/{uuid:[a-z]+}/fields/{fieldUuid:[a-z]+}",
+      "parameters": {
+        "uuid": {
+          "type": "string",
+          "description": ""
+        },
+        "fieldUuid": {
+          "type": "string",
+          "description": ""
+        }
+      }
+    }
+  },
+  "getformgroups": {
+    "version": ["v1"],
+    "method": "GET",
+    "parameters": {},
+    "sample": {
+      "200": "",
+      "500": ""
+    },
+    "queryStrings": {
+      "page": {
+        "type": "integer",
+        "description": "Pagination"
+      }
+    },
+    "headers": ["siteIdentifier", "Authorization"],
+    "path": {
+      "uri": "/forms/{uuid:[a-z]+}/groups/{groupUuid:[a-z]+}",
+      "parameters": {
+        "uuid": {
+          "type": "string",
+          "description": ""
+        },
+        "groupUuid": {
+          "type": "string",
+          "description": ""
+        }
+      }
+    }
+  },
+  "getformresult": {
+    "version": ["v1"],
+    "method": "GET",
+    "parameters": {},
+    "sample": {
+      "200": "",
+      "500": ""
+    },
+    "queryStrings": {
+      "page": {
+        "type": "integer",
+        "description": "Pagination"
+      }
+    },
+    "headers": ["siteIdentifier", "Authorization"],
+    "path": {
+      "uri": "/forms/{uuid:[a-z]+}/results/{resultUuid:[a-z]+}",
+      "parameters": {
+        "uuid": {
+          "type": "string",
+          "description": ""
+        },
+        "resultUuid": {
+          "type": "string",
+          "description": ""
+        }
+      }
+    }
+  },
+  "listformdata": {
+    "version": ["v1"],
+    "method": "GET",
+    "parameters": {},
+    "sample": {
+      "200": "",
+      "500": ""
+    },
+    "queryStrings": {
+      "page": {
+        "type": "integer",
+        "description": "Pagination"
+      }
+    },
+    "headers": ["siteIdentifier", "Authorization"],
+    "path": {
+      "uri": "/forms/{uuid:[a-z]+}/data",
+      "parameters": {
+        "uuid": {
+          "type": "string",
+          "description": ""
+        }
+      }
+    }
+  },
+  "listformfields": {
+    "version": ["v1"],
+    "method": "GET",
+    "parameters": {},
+    "sample": {
+      "200": "",
+      "500": ""
+    },
+    "queryStrings": {
+      "page": {
+        "type": "integer",
+        "description": "Pagination"
+      }
+    },
+    "headers": ["siteIdentifier", "Authorization"],
+    "path": {
+      "uri": "/forms/{uuid:[a-z]+}/fields",
+      "parameters": {
+        "uuid": {
+          "type": "string",
+          "description": ""
+        }
+      }
+    }
+  },
+  "listformgroups": {
+    "version": ["v1"],
+    "method": "GET",
+    "parameters": {},
+    "sample": {
+      "200": "",
+      "500": ""
+    },
+    "queryStrings": {
+      "page": {
+        "type": "integer",
+        "description": "Pagination"
+      }
+    },
+    "headers": ["siteIdentifier", "Authorization"],
+    "path": {
+      "uri": "/forms/{uuid:[a-z]+}/groups",
+      "parameters": {
+        "uuid": {
+          "type": "string",
+          "description": ""
+        }
+      }
+    }
+  },
+  "listformresults": {
+    "version": ["v1"],
+    "method": "GET",
+    "parameters": {},
+    "sample": {
+      "200": "",
+      "500": ""
+    },
+    "queryStrings": {
+      "page": {
+        "type": "integer",
+        "description": "Pagination"
+      }
+    },
+    "headers": ["siteIdentifier", "Authorization"],
+    "path": {
+      "uri": "/forms/{uuid:[a-z]+}/results",
+      "parameters": {
+        "uuid": {
+          "type": "string",
+          "description": ""
+        }
+      }
+    }
+  },
+  "listforms": {
+    "version": ["v1"],
+    "method": "GET",
+    "parameters": {},
+    "sample": {
+      "200": "",
+      "500": ""
+    },
+    "queryStrings": {
+      "page": {
+        "type": "integer",
+        "description": "Pagination"
+      }
+    },
+    "headers": ["siteIdentifier", "Authorization"],
+    "path": {
+      "uri": "/forms"
+    }
+  },
+  "putformresult": {
+    "version": ["v1"],
+    "method": "PUT",
+    "parameters": {},
+    "sample": {
+      "200": "",
+      "500": ""
+    },
+    "headers": ["siteIdentifier", "Authorization"],
+    "path": {
+      "uri": "/forms/{uuid:[a-z]+}/results/{resultUuid:[a-z]+}",
+      "parameters": {
+        "uuid": {
+          "type": "string",
+          "description": ""
+        },
+        "resultUuid": {
+          "type": "string",
+          "description": ""
+        }
+      }
+    }
+  },
+  "updateform": {
+    "version": ["v1"],
+    "method": "UPDATE",
+    "parameters": {},
+    "sample": {
+      "200": "",
+      "500": ""
+    },
+    "headers": ["siteIdentifier", "Authorization"],
+    "path": {
+      "uri": "/forms/{uuid:[a-z]+}",
+      "parameters": {
+        "uuid": {
+          "type": "string",
+          "description": ""
+        }
+      }
+    }
+  },
+  "updateformfield": {
+    "version": ["v1"],
+    "method": "PUT",
+    "parameters": {},
+    "sample": {
+      "200": "",
+      "500": ""
+    },
+    "headers": ["siteIdentifier", "Authorization"],
+    "path": {
+      "uri": "/forms/{uuid:[a-z]+}/fields/{fieldUuid:[a-z]+}",
+      "parameters": {
+        "uuid": {
+          "type": "string",
+          "description": ""
+        },
+        "fieldUuid": {
+          "type": "string",
+          "description": ""
+        }
+      }
+    }
+  },
+  "updateformgroups": {
+    "version": ["v1"],
+    "method": "PUT",
+    "parameters": {},
+    "sample": {
+      "200": "",
+      "500": ""
+    },
+    "headers": ["siteIdentifier", "Authorization"],
+    "path": {
+      "uri": "/forms/{uuid:[a-z]+}/groups",
+      "parameters": {
+        "uuid": {
+          "type": "string",
+          "description": ""
+        }
+      }
+    }
+  }
+}

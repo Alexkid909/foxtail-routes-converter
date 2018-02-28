@@ -1,0 +1,35 @@
+{
+  "getSearchResults": {
+    "version": ["v2"],
+    "resources": {
+      "namespace": "app\\http\\controllers\\base",
+      "controller": "SearchController",
+      "action": "getSearchResults",
+      "middleware": {}
+    },
+    "path": {
+      "uri": "search/{index:[a-z]+}",
+      "parameters": {
+        "index": {
+          "type": "string",
+          "description": "Index to search within; orders"
+        }
+      }
+    },
+    "method": "GET",
+    "headers": [
+      "siteIdentifier"
+    ],
+    "parameters": {},
+    "queryStrings": {
+      "page": {
+        "type": "integer",
+        "description": "Pagination"
+      }
+    },
+    "sample": {
+      "200": "",
+      "500": ""
+    }
+  }
+}

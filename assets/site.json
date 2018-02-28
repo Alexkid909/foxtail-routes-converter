@@ -1,0 +1,201 @@
+{
+  "AllModules": {
+    "version": ["v1"],
+    "method": "GET",
+    "parameters": {},
+    "sample": {
+      "200": "",
+      "500": ""
+    },
+    "queryStrings": {
+      "page": {
+        "type": "integer",
+        "description": "Pagination"
+      }
+    },
+    "headers": ["siteIdentifier", "Authorization"],
+    "path": {
+      "uri": "/site/modules/all"
+    }
+  },
+  "CreateSite": {
+    "version": ["v1"],
+    "method": "POST",
+    "parameters": {},
+    "sample": {
+      "200": "",
+      "500": ""
+    },
+    "headers": ["siteIdentifier", "Authorization"],
+    "path": {
+      "uri": "/site"
+    }
+  },
+  "GetAllSites": {
+    "version": ["v1"],
+    "method": "GET",
+    "parameters": {},
+    "sample": {
+      "200": "",
+      "500": ""
+    },
+    "queryStrings": {
+      "page": {
+        "type": "integer",
+        "description": "Pagination"
+      }
+    },
+    "headers": ["siteIdentifier", "Authorization"],
+    "path": {
+      "uri": "/site/all"
+    }
+  },
+  "GetCurrentSite": {
+    "version": ["v1"],
+    "method": "GET",
+    "parameters": {},
+    "sample": {
+      "200": "",
+      "500": ""
+    },
+    "queryStrings": {
+      "page": {
+        "type": "integer",
+        "description": "Pagination"
+      }
+    },
+    "headers": ["siteIdentifier"],
+    "path": {
+      "uri": "/site"
+    }
+  },
+  "GetSite": {
+    "version": ["v1"],
+    "method": "POST",
+    "parameters": {},
+    "sample": {
+      "200": "",
+      "500": ""
+    },
+    "headers": ["siteIdentifier"],
+    "path": {
+      "uri": "/site/{uuid:[a-z]+}",
+      "parameters": {
+        "uuid": {
+          "type": "string",
+          "description": ""
+        }
+      }
+    }
+  },
+  "SiteConfigCreate": {
+    "version": ["v1"],
+    "method": "POST",
+    "parameters": {},
+    "sample": {
+      "200": "",
+      "500": ""
+    },
+    "headers": ["siteIdentifier", "Authorization"],
+    "path": {
+      "uri": "/site/config"
+    }
+  },
+  "UpdateCurrentSite": {
+    "version": ["v1"],
+    "method": "PUT",
+    "parameters": {},
+    "sample": {
+      "200": "",
+      "500": ""
+    },
+    "headers": ["siteIdentifier", "Authorization"],
+    "path": {
+      "uri": "/site"
+    }
+  },
+  "UpdateSite": {
+    "version": ["v1"],
+    "method": "PUT",
+    "parameters": {},
+    "sample": {
+      "200": "",
+      "500": ""
+    },
+    "headers": ["siteIdentifier", "Authorization"],
+    "path": {
+      "uri": "/cms/{uuid:[a-z]+}",
+      "parameters": {
+        "uuid": {
+          "type": "string",
+          "description": ""
+        }
+      }
+    }
+  },
+  "getModules": {
+    "version": ["v1"],
+    "method": "GET",
+    "parameters": {},
+    "sample": {
+      "200": "",
+      "500": ""
+    },
+    "queryStrings": {
+      "page": {
+        "type": "integer",
+        "description": "Pagination"
+      }
+    },
+    "headers": ["siteIdentifier", "Authorization"],
+    "path": {
+      "uri": "/site/modules"
+    }
+  },
+  "updateModuleState": {
+    "version": ["v1"],
+    "method": "PUT",
+    "parameters": {},
+    "sample": {
+      "200": "",
+      "500": ""
+    },
+    "headers": ["siteIdentifier", "Authorization"],
+    "path": {
+      "uri": "/site/modules/state/{moduleName:[a-z]+}/{state:[a-z]+}",
+      "parameters": {
+        "moduleName": {
+          "type": "string",
+          "description": ""
+        },
+        "state": {
+          "type": "string",
+          "description": ""
+        }
+      }
+    }
+  },
+  "GetConfig": {
+    "version": ["v2"],
+    "description": "",
+    "method": "GET",
+    "resources": {
+      "namespace": "app\\http\\controllers\\site",
+      "controller": "Config",
+      "action": "getAll",
+      "middleware": [
+        "siteIdentifier"
+      ]
+    },
+    "parameters": {},
+    "sample": {
+      "200": "",
+      "500": ""
+    },
+    "headers": ["siteIdentifier"],
+    "path": {
+      "uri": "site/config",
+      "parameters": {}
+    }
+  }
+}

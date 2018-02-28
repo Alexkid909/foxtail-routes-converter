@@ -1,0 +1,21 @@
+{
+  "GetPlatformVersion": {
+    "version": ["v1"],
+    "method": "GET",
+    "parameters": {},
+    "sample": {
+      "200": "",
+      "500": ""
+    },
+    "queryStrings": {
+      "page": {
+        "type": "integer",
+        "description": "Pagination"
+      }
+    },
+    "headers": [],
+    "path": {
+      "uri": "/"
+    }
+  }
+}

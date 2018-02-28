@@ -1,0 +1,211 @@
+{
+  "createfile": {
+    "version": ["v1"],
+    "method": "POST",
+    "parameters": {},
+    "sample": {
+      "200": "",
+      "500": ""
+    },
+    "headers": ["siteIdentifier", "Authorization"],
+    "path": {
+      "uri": "/filemanager"
+    }
+  },
+  "deletefile": {
+    "version": ["v1"],
+    "method": "DELETE",
+    "parameters": {},
+    "sample": {
+      "200": "",
+      "500": ""
+    },
+    "headers": ["siteIdentifier", "Authorization"],
+    "path": {
+      "uri": "/filemanager/{uuid:[a-z]+}",
+      "parameters": {
+        "uuid": {
+          "type": "string",
+          "description": ""
+        }
+      }
+    }
+  },
+  "getfile": {
+    "version": ["v1"],
+    "method": "GET",
+    "parameters": {},
+    "sample": {
+      "200": "",
+      "500": ""
+    },
+    "queryStrings": {
+      "page": {
+        "type": "integer",
+        "description": "Pagination"
+      }
+    },
+    "headers": [],
+    "path": {
+      "uri": "/filemanager/{uuid:[a-z]+}",
+      "parameters": {
+        "uuid": {
+          "type": "string",
+          "description": ""
+        }
+      }
+    }
+  },
+  "getfilecallbackauth": {
+    "version": ["v1"],
+    "method": "GET",
+    "parameters": {},
+    "sample": {
+      "200": "",
+      "500": ""
+    },
+    "queryStrings": {
+      "page": {
+        "type": "integer",
+        "description": "Pagination"
+      }
+    },
+    "headers": ["siteIdentifier", "Authorization"],
+    "path": {
+      "uri": "/filemanager/callback/auth"
+    }
+  },
+  "getfilecallbackfailure": {
+    "version": ["v1"],
+    "method": "GET",
+    "parameters": {},
+    "sample": {
+      "200": "",
+      "500": ""
+    },
+    "queryStrings": {
+      "page": {
+        "type": "integer",
+        "description": "Pagination"
+      }
+    },
+    "headers": ["siteIdentifier", "Authorization"],
+    "path": {
+      "uri": "/filemanager/callback/failure"
+    }
+  },
+  "getfilecallbackpath": {
+    "version": ["v1"],
+    "method": "GET",
+    "parameters": {},
+    "sample": {
+      "200": "",
+      "500": ""
+    },
+    "queryStrings": {
+      "page": {
+        "type": "integer",
+        "description": "Pagination"
+      }
+    },
+    "headers": ["siteIdentifier", "Authorization"],
+    "path": {
+      "uri": "/filemanager/callback/path"
+    }
+  },
+  "getfilecallbacksuccess": {
+    "version": ["v1"],
+    "method": "GET",
+    "parameters": {},
+    "sample": {
+      "200": "",
+      "500": ""
+    },
+    "queryStrings": {
+      "page": {
+        "type": "integer",
+        "description": "Pagination"
+      }
+    },
+    "headers": ["siteIdentifier", "Authorization"],
+    "path": {
+      "uri": "/filemanager/callback/success"
+    }
+  },
+  "getfiles": {
+    "version": ["v1"],
+    "method": "GET",
+    "parameters": {},
+    "sample": {
+      "200": "",
+      "500": ""
+    },
+    "queryStrings": {
+      "page": {
+        "type": "integer",
+        "description": "Pagination"
+      }
+    },
+    "headers": ["siteIdentifier", "Authorization"],
+    "path": {
+      "uri": "/filemanager"
+    }
+  },
+  "getfiletypes": {
+    "version": ["v1"],
+    "method": "GET",
+    "parameters": {},
+    "sample": {
+      "200": "",
+      "500": ""
+    },
+    "queryStrings": {
+      "page": {
+        "type": "integer",
+        "description": "Pagination"
+      }
+    },
+    "headers": ["siteIdentifier", "Authorization"],
+    "path": {
+      "uri": "/filemanager/types"
+    }
+  },
+  "getmetadata": {
+    "version": ["v1"],
+    "method": "GET",
+    "parameters": {},
+    "sample": {
+      "200": "",
+      "500": ""
+    },
+    "queryStrings": {
+      "page": {
+        "type": "integer",
+        "description": "Pagination"
+      }
+    },
+    "headers": ["siteIdentifier", "Authorization"],
+    "path": {
+      "uri": "/filemanager/{uuid:[a-z]+}/meta",
+      "parameters": {
+        "uuid": {
+          "type": "string",
+          "description": ""
+        }
+      }
+    }
+  },
+  "sendbinaryfile": {
+    "version": ["v1"],
+    "method": "POST",
+    "parameters": {},
+    "sample": {
+      "200": "",
+      "500": ""
+    },
+    "headers": ["siteIdentifier", "Authorization", "FileUuid"],
+    "path": {
+      "uri": "/files"
+    }
+  }
+}

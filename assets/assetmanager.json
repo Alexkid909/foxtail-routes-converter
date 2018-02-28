@@ -1,0 +1,302 @@
+{
+  "createamfiles": {
+    "version": ["v1"],
+    "method": "POST",
+    "resource": "AM Files",
+    "parameters": {},
+    "sample": {
+      "200": "",
+      "500": ""
+    },
+    "queryStrings": {
+      "page": {
+        "type": "integer",
+        "description": "Pagination"
+      }
+    },
+    "headers": ["siteIdentifier", "Authorization"],
+    "path": {
+      "uri": "/assetmanager/{uuid:[a-z]+}/files",
+      "parameters": {
+        "uuid": {
+          "type": "string",
+          "description": ""
+        }
+      }
+    }
+  },
+  "createamgroup": {
+    "version": ["v1"],
+    "method": "POST",
+    "resource": "AM Group",
+    "parameters": {},
+    "sample": {
+      "200": "",
+      "500": ""
+    },
+    "headers": ["siteIdentifier", "Authorization"],
+    "path": {
+      "uri": "/assetmanager/groups"
+    }
+  },
+  "createasset": {
+    "version": ["v1"],
+    "method": "POST",
+    "resource": "AM Assets",
+    "parameters": {},
+    "sample": {
+      "200": "",
+      "500": ""
+    },
+    "headers": ["siteIdentifier", "Authorization"],
+    "path": {
+      "uri": "/assetmanager"
+    }
+  },
+  "deleteamfile": {
+    "version": ["v1"],
+    "method": "DELETE",
+    "resource": "AM Files",
+    "parameters": {},
+    "sample": {
+      "200": "",
+      "500": ""
+    },
+    "headers": ["siteIdentifier", "Authorization"],
+    "path": {
+      "uri": "/assetmanager/{assetUuid:[a-z]+}/files/{uuid:[a-z]+}",
+      "parameters": {
+        "assetUuid": {
+          "type": "string",
+          "description": ""
+        },
+        "uuid": {
+          "type": "string",
+          "description": ""
+        }
+      }
+    }
+  },
+  "deleteamgroup": {
+    "version": ["v1"],
+    "method": "DELETE",
+    "resource": "AM Group",
+    "parameters": {},
+    "sample": {
+      "200": "",
+      "500": ""
+    },
+    "headers": ["siteIdentifier", "Authorization"],
+    "path": {
+      "uri": "/assetmanager/groups/{uuid:[a-z]+}",
+      "parameters": {
+        "uuid": {
+          "type": "string",
+          "description": ""
+        }
+      }
+    }
+  },
+  "deleteasset": {
+    "version": ["v1"],
+    "method": "DELETE",
+    "resource": "AM Assets",
+    "parameters": {},
+    "sample": {
+      "200": "",
+      "500": ""
+    },
+    "headers": ["siteIdentifier", "Authorization"],
+    "path": {
+      "uri": "/assetmanager/{uuid:[a-z]+}",
+      "parameters": {
+        "uuid": {
+          "type": "string",
+          "description": ""
+        }
+      }
+    }
+  },
+  "getamgroups": {
+    "version": ["v1"],
+    "method": "GET",
+    "resource": "AM Group",
+    "parameters": {},
+    "sample": {
+      "200": "",
+      "500": ""
+    },
+    "queryStrings": {
+      "page": {
+        "type": "integer",
+        "description": "Pagination"
+      }
+    },
+    "headers": ["siteIdentifier", "Authorization"],
+    "path": {
+      "uri": "/assetmanager/groups/{uuid:[a-z]+}",
+      "parameters": {
+        "uuid": {
+          "type": "string",
+          "description": ""
+        }
+      }
+    }
+  },
+  "getasset": {
+    "version": ["v1"],
+    "method": "GET",
+    "resource": "AM Assets",
+    "parameters": {},
+    "sample": {
+      "200": "",
+      "500": ""
+    },
+    "queryStrings": {
+      "page": {
+        "type": "integer",
+        "description": "Pagination"
+      }
+    },
+    "headers": ["siteIdentifier"],
+    "path": {
+      "uri": "/assetmanager/{uuid:[a-z]+}",
+      "parameters": {
+        "uuid": {
+          "type": "string",
+          "description": ""
+        }
+      }
+    }
+  },
+  "listamfiles": {
+    "version": ["v1"],
+    "method": "GET",
+    "resource": "AM Files",
+    "parameters": {},
+    "sample": {
+      "200": "",
+      "500": ""
+    },
+    "queryStrings": {
+      "page": {
+        "type": "integer",
+        "description": "Pagination"
+      }
+    },
+    "headers": ["siteIdentifier", "Authorization"],
+    "path": {
+      "uri": "/assetmanager/{uuid:[a-z]+}/files",
+      "parameters": {
+        "uuid": {
+          "type": "string",
+          "description": ""
+        }
+      }
+    }
+  },
+  "listamgroups": {
+    "version": ["v1"],
+    "method": "GET",
+    "resource": "AM Group",
+    "parameters": {},
+    "sample": {
+      "200": "",
+      "500": ""
+    },
+    "queryStrings": {
+      "page": {
+        "type": "integer",
+        "description": "Pagination"
+      }
+    },
+    "headers": ["siteIdentifier", "Authorization"],
+    "path": {
+      "uri": "/assetmanager/groups"
+    }
+  },
+  "listassets": {
+    "version": ["v1"],
+    "method": "GET",
+    "resource": "AM Assets",
+    "parameters": {},
+    "sample": {
+      "200": "",
+      "500": ""
+    },
+    "queryStrings": {
+      "page": {
+        "type": "integer",
+        "description": "Pagination"
+      }
+    },
+    "headers": ["siteIdentifier", "Authorization"],
+    "path": {
+      "uri": "/assetmanager"
+    }
+  },
+  "primaryamfile": {
+    "version": ["v1"],
+    "method": "PUT",
+    "resource": "AM Files",
+    "parameters": {},
+    "sample": {
+      "200": "",
+      "500": ""
+    },
+    "headers": ["siteIdentifier", "Authorization"],
+    "path": {
+      "uri": "/assetmanager/{assetUuid:[a-z]+}/files/{fileUuid:[a-z]+}/primary",
+      "parameters": {
+        "assetUuid": {
+          "type": "string",
+          "description": ""
+        },
+        "fileUuid": {
+          "type": "string",
+          "description": ""
+        }
+      }
+    }
+  },
+  "updateamgroup": {
+    "version": ["v1"],
+    "method": "PUT",
+    "resource": "AM Group",
+    "parameters": {},
+    "sample": {
+      "200": "",
+      "500": ""
+    },
+    "headers": ["siteIdentifier", "Authorization"],
+    "path": {
+      "uri": "/assetmanager/groups/{uuid:[a-z]+}",
+      "parameters": {
+        "uuid": {
+          "type": "string",
+          "description": ""
+        }
+      }
+    }
+  },
+  "updateasset": {
+    "version": ["v1"],
+    "method": "PUT",
+    "resource": "AM Assets",
+    "parameters": {},
+    "sample": {
+      "200": "",
+      "500": ""
+    },
+    "headers": ["siteIdentifier", "Authorization"],
+    "path": {
+      "uri": "/assetmanager/{uuid:[a-z]+}",
+      "parameters": {
+        "uuid": {
+          "type": "string",
+          "description": ""
+        }
+      }
+    }
+  }
+}
