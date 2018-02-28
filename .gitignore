@@ -1,0 +1,7 @@
+bower_components/
+node_modules/
+src/node_modules/
+src/config/environment.json
+src/config/prod.environment.json
+src/config/dev.environment.json
+.idea/
