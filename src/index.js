@@ -42,20 +42,18 @@ const apiRoutes = {
     }*/
 };
 
-// app.listen(port, () => {
-//     console.log(`We are live on ${port}`);
-// });
 
 function parseAll() {
-    parseModules().then(success => {
+    parseModules(apiRoutes).then(success => {
         const result = `
 FORMAT: 1A
 
 #Chemistry CMS API
 
-${success}`;
+${success}
+`;
 
-        console.log(result);
+        // console.log(result);
         writeOutput(result);
     });
 };
@@ -63,43 +61,75 @@ ${success}`;
 parseAll();
 
 function writeOutput(string) {
-    fs.writeFile('./output/file.json',string,'utf8');
+
+    fs.mkdir('blueprint', () => {
+        fs.writeFile('./blueprint/API.apib',string,'utf8');
+    });
 }
 
 
-function parseModules() {
+function parseModules(modules) {
     const promises = [];
-    for (let moduleName in apiRoutes) {
-        let module = apiRoutes[moduleName];
+    for (let moduleName in modules) {
+        let module = modules[moduleName];
         promises.push(parseModule(moduleName, module));
-        console.log('promises', promises);
     };
     return Promise.all(promises).then(success => {
-            console.log();
             return success;
         },error => console.log(error)
     );
 };
 
 function parseResponseExamples(examplesObj) {
-    const array = [];
-    for (let example in examplesObj) {
-        let exampleString = `
-+ Response ${example} ${examplesObj[example]}
-`;
-        array.push(exampleString);
+
+    if (examplesObj) {
+        const array = [];
+        for (let exampleProp in examplesObj) {
+            let example = examplesObj[exampleProp];
+            // console.log('ex', JSON.stringify(examplesObj[example]));
+            let exampleString = `
+        
+        + Response ${exampleProp} ${example.headers ? `
+        
+            + Headers
+            ${parseHeaders(example.headers)}` : ``} ${example.body ? `+ Body ${JSON.stringify(example.body)}` : ``}`;
+            array.push(exampleString);
+        }
+        return array.join('');
+    } else {
+        return ``;
+    }
+}
+
+function parseHeaders(headersJSON) {
+    const array = [``];
+    for (let header in headersJSON) {
+        array.push(`
+                ${header} : ${headersJSON[header]}`);
     }
     return array.join('');
 }
+
 
 function parseModule(name, module) {
     let promise = new Promise((resolve, reject) => {
         fs.readFile(module.path, 'utf8', (err, data) => {
             if(data) {
-                let module = `# Group ${name}
-                
-${parseResources(JSON.parse(data))}
-`;
+                let obj = {};
+                data = JSON.parse(data);
+                // console.log('*** data ***', data);
+                for (let resource in data) {
+                    // console.log(resource);
+                    let resourceName = data[resource].resource;
+                    if (!obj[resourceName]) {
+                        obj[resourceName] = {}
+                    };
+                    obj[resourceName][resource] = data[resource];
+                    delete obj[resourceName][resource].resource;
+                }
+                // console.log('***obj***', obj);
+
+                let module = `# Group ${name}${parseResources(obj)}`;
                 resolve(module);
             } else {
                 reject(err);
@@ -110,34 +140,43 @@ ${parseResources(JSON.parse(data))}
 }
 
 function parseResources(resources) {
-    const array = [];
-    for (resource in resources) {
-        array.push(parseResource(resource, resources[resource]));
+    if (resources) {
+        console.log('resources', resources);
+        const array = [];
+        for (resource in resources) {
+            array.push(parseResource(resource, resources[resource]));
+        }
+        let result = array.join('');
+    } else {
+        return ''
     }
-    return array.join('');
 }
 
 function parseResource(name, resourceData) {
-    const result =`## ${resourceData.resource} [${resourceData.path.uri}]
+    if (resourceData.hasOwnProperty('resource') && resourceData.hasOwnProperty('path')) {
+        return result =`
+        
+## ${resourceData.resource} [${resourceData.path.uri}]
 
-### ${name} [${resourceData.method}]
-${parseResponseExamples(resourceData.sample)}
-${parsePathParameters(resourceData.path.parameters)}
-`;
-    return result;
+### ${name} [${resourceData.method}]${parseResponseExamples(resourceData.sample)}${parsePathParameters(resourceData.path.parameters)}`;
+    }
 };
 
 function parsePathParameters(pathParams) {
     const array = [];
     if(pathParams) {
-        array.push(`+ Parameters`);
+        array.push(`
+        
+        + Parameters`);
         for (let param in pathParams) {
-            let exampleString = `
-        + ${param} (${pathParams[param].type})- ${pathParams[param].description}`;
-            array.push(exampleString);
+            let pathParam = pathParams[param];
+            let paramString = `
+            
+            + ${param} (${pathParam.type})${pathParam.description ? ` - ${pathParam.description}` : ``}`;
+            array.push(paramString);
         }
         return array.join('');
     } else {
-        return ``;
+        return '';
     }
 }

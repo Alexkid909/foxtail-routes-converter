@@ -2,6 +2,7 @@
   "Authenticate": {
     "version": ["v1", "v2"],
     "method": "POST",
+    "resource": "Authenticate User",
     "resources": {
       "namespace": "app\\http\\controllers\\user",
       "controller": "Authentication",
@@ -20,7 +21,17 @@
       }
     },
     "sample": {
-      "200": {"token_type":"Bearer","expires_in":360,"access_token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJleGFtcGxlLm9yZyIsImF1ZCI6ImV4YW1wbGUuY29tIiwiaWF0IjoxMzU2OTk5NTI0LCJuYmYiOjEzNTcwMDAwMDAsImRhdGEiOnsidXNlciI6IjI0M2VkNWUzLTBjNDItNDdhZi05NGRlLWNmZDA2ZDI1MWZlZSIsIm5hbWUiOiJBbmRyZXcifX0.CrwE2wSLRQMO5zLVyTcU5LRLMg9fft_afUZVgZzD33nyaVxVlF179AimvAgbHfA_AeuWjhDQ3SMlpo6eRcLffkoQV1yTetXwB4ZRCQtx4qjcN5sqo5pCCNGwyrjh7Yp-yoR5p1-ryj7MOfHP5aJQmMxrGdkOgSkSkcE12zD5nPBTOY365tZiHavnUzPw0WxcPBH_OFeCn6JQhpqUlV9QGGBW4JuvY_9ju9thwbsXM3mkusHf6En_Tc7ncb-xaIUXrCfn9qgQsha1Pw2Dqd7NdMByZ4y8ldC1o6Jpz-RBAv4QNigzfDL3gmkMCCcwZ1CitojT0p3ue2tsrl_0ApWOeZFxd2C8SkR7spuKQziPuGcF7fFWV7Nvz9QiVLPjnZryAcpTmQ3-MC8KCPuXz59xPjStsXtmDzrxlgjupVMxECCv4K40SQWoBuy7DkGZ_Kh_DrCFttuCj68kotfMsIFyvkXcF5qzPySsQAgYTNYrI3UpM4jhMQgpX--zB6IaGm1qUN2mPz6O5NPBYHQvQNi41Lpj84h7ctnRsg5WOn7kSEXYhfL082oH2mXXp4C4B3oqhEMPggLRfRf07v_DJ6M-Vr9HYBgFY3WY139Awuwcli4qCpw58QBoTvR5Y6P0PT67GmR6TkgvssREP3tJ5Lh3NPU3G6V3m9NtSrAuDVGXHts"},
+      "200": {
+        "headers": {
+          "token_type":"Bearer",
+          "expires_in":360,
+          "access_token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJleGFtcGxlLm9yZyIsImF1ZCI6ImV4YW1wbGUuY29tIiwiaWF0IjoxMzU2OTk5NTI0LCJuYmYiOjEzNTcwMDAwMDAsImRhdGEiOnsidXNlciI6IjI0M2VkNWUzLTBjNDItNDdhZi05NGRlLWNmZDA2ZDI1MWZlZSIsIm5hbWUiOiJBbmRyZXcifX0.CrwE2wSLRQMO5zLVyTcU5LRLMg9fft_afUZVgZzD33nyaVxVlF179AimvAgbHfA_AeuWjhDQ3SMlpo6eRcLffkoQV1yTetXwB4ZRCQtx4qjcN5sqo5pCCNGwyrjh7Yp-yoR5p1-ryj7MOfHP5aJQmMxrGdkOgSkSkcE12zD5nPBTOY365tZiHavnUzPw0WxcPBH_OFeCn6JQhpqUlV9QGGBW4JuvY_9ju9thwbsXM3mkusHf6En_Tc7ncb-xaIUXrCfn9qgQsha1Pw2Dqd7NdMByZ4y8ldC1o6Jpz-RBAv4QNigzfDL3gmkMCCcwZ1CitojT0p3ue2tsrl_0ApWOeZFxd2C8SkR7spuKQziPuGcF7fFWV7Nvz9QiVLPjnZryAcpTmQ3-MC8KCPuXz59xPjStsXtmDzrxlgjupVMxECCv4K40SQWoBuy7DkGZ_Kh_DrCFttuCj68kotfMsIFyvkXcF5qzPySsQAgYTNYrI3UpM4jhMQgpX--zB6IaGm1qUN2mPz6O5NPBYHQvQNi41Lpj84h7ctnRsg5WOn7kSEXYhfL082oH2mXXp4C4B3oqhEMPggLRfRf07v_DJ6M-Vr9HYBgFY3WY139Awuwcli4qCpw58QBoTvR5Y6P0PT67GmR6TkgvssREP3tJ5Lh3NPU3G6V3m9NtSrAuDVGXHts"
+        },
+        "body" : {
+          "stuff" : "some stuff",
+          "other_stuff": "some other stuff"
+        }
+      },
       "403": {"status":403,"message":"Forbidden"}
     },
     "headers": [],
