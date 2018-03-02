@@ -201,8 +201,60 @@
     "resource": "AM Group",
     "parameters": {},
     "sample": {
-      "200": "",
-      "500": ""
+      "request": {
+        "headers": {
+          "Host": "dev.api.mercurycms.io",
+          "Connection": "keep-alive",
+          "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6ImE3MDQ4YTgwYzE3MmY0ZGQyYzg5MmJiMGZjYjBmMGU0YWE4NDE2ODE3NDJkY2ZmMDhhNjUzMDI5NTA0NTkzMWQxMmNhMDBhMjliNWVhNjQ2In0.eyJhdWQiOiIxIiwianRpIjoiYTcwNDhhODBjMTcyZjRkZDJjODkyYmIwZmNiMGYwZTRhYTg0MTY4MTc0MmRjZmYwOGE2NTMwMjk1MDQ1OTMxZDEyY2EwMGEyOWI1ZWE2NDYiLCJpYXQiOjE1MTk5OTA2MDYsIm5iZiI6MTUxOTk5MDYwNiwiZXhwIjoxNTUxNTI2NjA2LCJzdWIiOiIyYzg5YWQxNi01ZjYwLTRiNTItODdlYS05ODBkYjUyNmU0ODQiLCJzY29wZXMiOlsiZ2xvYmFsIl19.p2grZdvA-Fg0Qb_a4jU7AHhTUbEhA5hIytZwqCoT5gKvWMhCG4F5zkWtIyGSijsASiALF5hjx9WhW5jLbVQhkCkldUVAfW8KG9lg5bcBSDw-wCEje0IGDXuBKHD7MEIXTX1zq4UneZVasIk1n2drYYcjMoxRL_X5n5RbwO2mKOwZObfJBp_qYXlCuCJGGhSGAkrfZ1rcIaPFuzQouWlozPZVP7P4rmUlOF6th8OFPbcVU6FZzKM7cqhmXLL1CRD30cqFsI5PU7UoWN-yIcvoXs6KY88WMl39zikxGZbb2eTGvaFhbxpql-Kw-qvgzG7zE-w8fBSR4Mc9fzocpZzM0g6yL4WNXipuzE5WnajDP3vDqBFeaEtdbCpwHJFK8ACqgdG8v9gvi9LwZFM3KqbwQM6m2yR2bLbA715w-AvpvLacI7Hv-hn-omkUfhsajhNL5Z5omVw1S5bYwuA5ZGngBQpCgWDQw4s-gFXUG7VtbkXzHt14lsuLEVEjaKTqUGVNKcpdyJla52JNzqhT0CMUrF6jdAwXofXh9MU3dxk01pmqpDad4yAuoY50zM9W-ZoiBM3r-Zs7rU4G8cHZQZS5jVlAJWSXEyGbNXA-eYUPGShoamuLuYm6WS4IaK-CW4q2xc-F9Xou3dnP8peUagZZoaHXOADwa_eLrRWPFS0Qfeo",
+          "Origin": "http://admin.mercurycms.io",
+          "User-Agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.78 Safari/537.36",
+          "Content-Type": "application/x-www-form-urlencoded",
+          "siteIdentifier": "091bbc8e-c1ae-46ac-b426-c746c45b8a62",
+          "StaticCmsCall": "true",
+          "Accept": "*/*",
+          "Referer": "http://admin.mercurycms.io/",
+          "Accept-Encoding": "gzip, deflate",
+          "Accept-Language": "en-US,en;q=0.8"
+        }
+      },
+      "response": {
+        "200": {
+          "headers": {
+            "Access-Control-Allow-Methods": "HEAD, GET, POST, PUT, PATCH, DELETE",
+            "Access-Control-Allow-Origin": "*",
+            "Cache-Control": "no-cache, private",
+            "Content-Type": "application/json",
+            "Date": "Fri, 02 Mar 2018 11:40:05 GMT",
+            "Server": "nginx/1.13.9",
+            "X-Powered-By": "PHP/7.1.11",
+            "Content-Length": "2235",
+            "Connection": "keep-alive"
+          },
+          "body": {
+            "data": [
+              {
+                "uuid": "02531907-47fd-41af-b4e7-1c4e3f1a902d",
+                "title": "Edited Group",
+                "createdAt": "2017-10-04 11:10:00",
+                "updatedAt": "2017-11-15 14:20:47"
+              }
+            ],
+            "meta": {
+              "pagination": {
+                "total": 18,
+                "count": 15,
+                "per_page": 15,
+                "current_page": 1,
+                "total_pages": 2,
+                "links": {
+                  "next": "http:\/\/dev.api.mercurycms.io\/v1\/assetmanager\/groups?page=2"
+                }
+              }
+            }
+          }
+        },
+        "500": ""
+      }
     },
     "queryStrings": {
       "page": {
